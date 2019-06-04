@@ -21,20 +21,12 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{dvb}
-\BIBentryALTinterwordspacing
-A.~Morello and V.~Mignone, ``{DVB-S2X: The New Extensions to the Second
-  Generation DVB Satellite Standard DVB-S2},'' \emph{Int. J. Satell. Commun.
-  Netw.}, vol.~34, no.~3, pp. 323--325, May 2016. [Online]. Available:
-  \url{https://doi.org/10.1002/sat.1167}
-\BIBentrySTDinterwordspacing
-
 \bibitem{ldpc}
-\BIBentryALTinterwordspacing
-Y.~{Zhang} and W.~E. {Ryan}, ``{Toward low LDPC-code floors: a case study},''
-  \emph{IEEE Transactions on Communications}, vol.~57, no.~6, pp. 1566--1573,
-  June 2009. [Online]. Available:
-  \url{https://doi.org/10.1109/TCOMM.2009.06.0700712}
-\BIBentrySTDinterwordspacing
+R.Gallager, ``{Low-density parity check codes},'' \emph{IRE Trans.Information
+  Theory}, pp. 21--28, Jan. 1962.
+
+\bibitem{minsum}
+N.~Wiberg, ``{Codes and Decoding on General Graphs},'' \emph{Phd
+  Dissertation,Linkoping University,Sweden}, 1996.
 
 \end{thebibliography}

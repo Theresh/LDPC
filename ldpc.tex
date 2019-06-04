@@ -236,7 +236,7 @@ of Electrical Engineering, Indian Institute of Technology, Hyderabad
 %
 \begin{abstract}
 \boldmath
-A brief description about the design and implementataion of LDPC codes using DVB-S2  \cite{dvb} standard.
+A brief description about the design and implementataion of LDPC codes using (7,4) Hamming parity check matrix.
 \end{abstract}
 
 
@@ -352,7 +352,7 @@ L(x_j)&=\log \brak{\frac{Pr(x_j=1|y)}{Pr(x_j=-1|y)}} \quad X=1-2c\\
 L(x_j)&= \frac{2y_j}{\sigma^2} \label{eq :li}
 \end{align}
 \item Check Node Operation : \\
-Lets assume that we have initilized all LLR values to variable nodes and we sent to check nodes. 
+Lets assume that we have initilized all LLR values to variable nodes and we sent to check nodes. ${V_j}$ represents all the variable nodes which are connected to $j^{th}$ check node. Using the min-sum approximation\cite{minsum}, the message from  $j^{th}$ check node to  $i^{th}$ variable node given by,
 \begin{figure}[!ht]
 \begin{center}
 %\begin{tikzpicture}
@@ -392,9 +392,15 @@ Lets assume that we have initilized all LLR values to variable nodes and we sent
 \caption{Check node operation}
 \label{fig : check}
 \end{figure}
+
+\begin{align}
+L(r_{j=0,i=0}) &= sign(L(1))\times sign(L(2))\times sign(L(4))\\ \nonumber
+&\times \min \brak{\abs{L(1)},\abs{L(2)},\abs{L(4)}} \\\nonumber
+&=\sbrak{\prod_{k \in V_j \setminus i} sign(L(q_{kj}))} \min_{k \in V_j \setminus i} \abs{L(q_{kj})}\\ \label{eq : rji}
+\end{align}
 %
 \item Variable Node Operation :\\
-Lets take the first variable node $v0$ which takes input LLR, and check to variable message node messages $Qvc$ . i.e $Qvc(1,0),Qvc(2,0)$. The variable node 0 to check node 0 i.e $R(0,0)$ can be defined as ,
+Let ${C_i}$ denotes all the check nodes connected to $i^{th}$ variable node. The message from $i^{th}$ variable node to  $j^{th}$ check node given by,
 \begin{figure}[!ht]
 \begin{center}
 %\begin{tikzpicture}
@@ -438,7 +444,7 @@ Transmitted frames = N, Total number of bits = N $\times$ 7 and Total number of 
 For Each Frame,
 \begin{enumerate}
 \item Initialize $L(q_{ij})$ using \eqref{eq :li} for all $i,j$ for which $h_{ij}=1$ with channel LLR's.
-\item Update $\cbrak{L(r_{ji})}$ using .
+\item Update $\cbrak{L(r_{ji})}$ using \eqref{eq : rji}.
 \item Update $\cbrak{L(q_{ji})}$ using \eqref{eq: qij}.
 \item Update $\cbrak{L(V_i)}$ using,
 \begin{equation}
@@ -455,6 +461,7 @@ Decoding can be done using,
 0 & else
 \end{cases}
 \end{equation}
+%
 \section{Results}
 For frames N=10000.
  \begin{figure}[!ht]
@@ -464,7 +471,7 @@ For frames N=10000.
 \label{fig : ber}
 \end{center}
 \end{figure}
-Fig .\ref{fig : ber} Shows the Comparison of Probability error with channel coding and without channel coding. Since the parity check matrix taken was not much sparse, we are not getting near shannon limit performance. For Good sparse matrix i.e number of entries in H $<< m\times n $
+Fig \ref{fig : ber} Shows the Comparison of Probability error with channel coding and without channel coding. Since the parity check matrix taken was not much sparse, we are not getting near shannon limit performance. For Good sparse matrix i.e number of entries in H $<< m\times n $
 
 \bibliography{IEEEabrv,ldpc.bib}
 \end{document}
