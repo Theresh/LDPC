@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2018.1.31)  4 JUN 2019 13:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2018.1.31)  6 JUN 2019 15:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -820,18 +820,34 @@ Underfull \vbox (badness 2961) has occurred while \output is active []
 File: ./figs/checkope.eps Graphic file (type eps)
 
 <./figs/checkope.eps>
-Underfull \vbox (badness 1275) has occurred while \output is active []
-
-File: ./figs/varope.eps Graphic file (type eps)
-
-<./figs/varope.eps>
-Overfull \hbox (15.96237pt too wide) in paragraph at lines 439--439
+Overfull \hbox (18.36653pt too wide) in paragraph at lines 405--405
 [] 
  []
 
-[2]
+
+Overfull \hbox (46.52342pt too wide) in paragraph at lines 411--411
+[] 
+ []
+
+
+Overfull \hbox (10.15451pt too wide) detected at line 414
+\OML/txmi/m/it/12 sign\OT1/txr/m/n/12 (\OML/txmi/m/it/12 L[]\OT1/txr/m/n/12 ) =
+ \OML/txmi/m/it/12 sign\OT1/txr/m/n/12 (\OML/txmi/m/it/12 L[]\OT1/txr/m/n/12 )\
+OML/txmi/m/it/12 sign\OT1/txr/m/n/12 (\OML/txmi/m/it/12 L[]\OT1/txr/m/n/12 )\OM
+L/txmi/m/it/12 sign\OT1/txr/m/n/12 (\OML/txmi/m/it/12 L[]\OT1/txr/m/n/12 )[] 
+ []
+
+File: ./figs/varope.eps Graphic file (type eps)
+<./figs/varope.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+Overfull \hbox (15.96237pt too wide) in paragraph at lines 463--463
+[] 
+ []
+
 File: ./figs/ber.eps Graphic file (type eps)
- <./figs/ber.eps> (./ldpc.bbl
+<./figs/ber.eps> (./ldpc.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 25--27
 []\OT1/txr/m/n/9 R.Gallager, ``Low-density par-ity check codes,'' \OT1/txr/m/it
 /9 IRE
@@ -839,12 +855,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--27
 
 ) [3] (./ldpc.aux) ) 
 Here is how much of TeX's memory you used:
- 15094 strings out of 493305
- 266488 string characters out of 6139897
- 317830 words of memory out of 5000000
- 18234 multiletter control sequences out of 15000+600000
+ 15096 strings out of 493305
+ 266507 string characters out of 6139897
+ 321830 words of memory out of 5000000
+ 18236 multiletter control sequences out of 15000+600000
  62210 words of font info for 151 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
- 56i,14n,55p,422b,441s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,14n,55p,422b,445s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on ldpc.dvi (3 pages, 19816 bytes).
+Output written on ldpc.dvi (3 pages, 24656 bytes).

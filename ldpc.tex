@@ -392,7 +392,31 @@ Lets assume that we have initilized all LLR values to variable nodes and we sent
 \caption{Check node operation}
 \label{fig : check}
 \end{figure}
+since parity node equation for the first check node is $p_0=m_0+m_1+m_2+m_4$. we need to calculate
+\begin{equation}\label{eq:sub}
+\log \brak{\frac{1-\frac{1-p_0}{p_0}}{1-\frac{1-p_0}{p_0}}}
+\end{equation}
+Where $p_i$ is the probability. getting message from check to variable node by taking all variable node informations.
+\begin{align}
+\frac{1-\frac{1-p_0}{p_0}}{1-\frac{1-p_0}{p_0}} & = \frac{1-\frac{1-p_1}{p_1}}{1-\frac{1-p_1}{p_1}} \times \frac{1-\frac{1-p_2}{p_2}}{1-\frac{1-p_2}{p_2}} \times \frac{1-\frac{1-p_4}{p_4}}{1-\frac{1-p_4}{p_4}}\\
+\frac{1-e^{-L_{ext0,0}}}{1+e^{-L_{ext0,0}}} &=\frac{1-e^{-L_{ext1,0}}}{1+e^{-L_{ext1,0}}}\times \frac{1-e^{-L_{ext2,0}}}{1+e^{-L_{ext2,0}}} \times \frac{1-e^{-L_{ext4,0}}}{1+e^{-L_{ext4,0}}}\\ \nonumber
+\tanh \brak{\frac{L{ext0,0}}{2}}& =\tanh \brak{\frac{L{ext1,0}}{2}}\tanh \brak{\frac{L{ext2,0}}{2}}\\ \label{eq :first}
+&\tanh \brak{\frac{L{ext4,0}}{2}} 
+\end{align}
 
+by substituting \eqref{eq :first} in \eqref{eq:sub} we get,
+\begin{align}
+\log \tanh \brak{\frac{L{ext0,0}}{2}} & = \log \tanh \brak{\frac{L{ext1,0}}{2}} +  \log \tanh \brak{\frac{L{ext2,0}}{2}}\\
+& + \log \tanh \brak{\frac{L{ext4,0}}{2}}\\
+\end{align}
+\begin{equation}
+sign(L_{ext0,0})= sign(L_{ext1,0})sign(L_{ext2,0})sign(L_{ext4,0})\\
+\end{equation}
+\begin{align}
+\tanh \brak{\frac{\abs{L_{ext0,0}}}{2}} &=\tanh \brak{\frac{\abs{L_{ext1,0}}}{2}}\tanh \brak{\frac{\abs{L_{ext2,0}}}{2}}\\
+&\tanh \brak{\frac{\abs{L_{ext4,0}}}{2}}
+\end{align}
+Using minsum algorithm \cite{minsum}
 \begin{align}
 L(r_{j=0,i=0}) &= sign(L(1))\times sign(L(2))\times sign(L(4))\\ \nonumber
 &\times \min \brak{\abs{L(1)},\abs{L(2)},\abs{L(4)}} \\\nonumber
