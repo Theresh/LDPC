@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.1.31)  10 JUN 2019 12:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.1.31)  10 JUN 2019 12:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1014,11 +1014,6 @@ OMS/txsy/m/n/12 ^^@ \OT1/txr/m/n/12 (1 \OMS/txsy/m/n/12 ^^@ \OML/txmi/m/it/12 p
  []
 
 
-Overfull \hbox (29.1701pt too wide) in paragraph at lines 443--443
-[] 
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2 <./figs/checkope-eps-converted-to.pdf>]
@@ -1030,7 +1025,7 @@ Package epstopdf Info: Source file: <./figs/fxgraph.eps>
 (epstopdf)                    size: 20299 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figs/fxgraph-eps-convert
 ed-to.pdf ./figs/fxgraph.eps>
-(epstopdf)             \includegraphics on input line 463.
+(epstopdf)             \includegraphics on input line 462.
 Package epstopdf Info: Output file is already uptodate.
 
 <./figs/fxgraph-eps-converted-to.pdf, id=29, 433.62pt x 289.08pt>
@@ -1038,7 +1033,7 @@ File: ./figs/fxgraph-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/fxgraph-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/fxgraph-eps-converted-to.pdf used on input line
- 463.
+ 462.
 (pdftex.def)             Requested size: 252.0pt x 168.00174pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1051,7 +1046,7 @@ Package epstopdf Info: Source file: <./figs/varope.eps>
 (epstopdf)                    size: 6386 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figs/varope-eps-converte
 d-to.pdf ./figs/varope.eps>
-(epstopdf)             \includegraphics on input line 504.
+(epstopdf)             \includegraphics on input line 503.
 Package epstopdf Info: Output file is already uptodate.
 
 <./figs/varope-eps-converted-to.pdf, id=30, 325.215pt x 246.9225pt>
@@ -1059,17 +1054,14 @@ File: ./figs/varope-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/varope-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/varope-eps-converted-to.pdf used on input line 
-504.
+503.
 (pdftex.def)             Requested size: 252.0pt x 191.33656pt.
 
-Overfull \hbox (5.5127pt too wide) in paragraph at lines 515--515
+Overfull \hbox (5.5127pt too wide) in paragraph at lines 514--514
 [] 
  []
 
-
-Underfull \vbox (badness 4846) has occurred while \output is active []
-
- [3 <./figs/fxgraph-eps-converted-to.pdf> <./figs/varope-eps-converted-to.pdf>]
+[3 <./figs/fxgraph-eps-converted-to.pdf> <./figs/varope-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./figs/ber.eps>
 (epstopdf)                    date: 2019-06-04 12:39:10
 (epstopdf)                    size: 33278 bytes
@@ -1078,14 +1070,14 @@ Package epstopdf Info: Source file: <./figs/ber.eps>
 (epstopdf)                    size: 12122 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figs/ber-eps-converted-t
 o.pdf ./figs/ber.eps>
-(epstopdf)             \includegraphics on input line 545.
+(epstopdf)             \includegraphics on input line 544.
 Package epstopdf Info: Output file is already uptodate.
 
 <./figs/ber-eps-converted-to.pdf, id=69, 562.1pt x 421.575pt>
 File: ./figs/ber-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/ber-eps-converted-to.pdf>
-Package pdftex.def Info: ./figs/ber-eps-converted-to.pdf used on input line 545
+Package pdftex.def Info: ./figs/ber-eps-converted-to.pdf used on input line 544
 .
 (pdftex.def)             Requested size: 252.0pt x 188.99939pt.
  (./ldpc.bbl
@@ -1098,7 +1090,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--27
 Here is how much of TeX's memory you used:
  18076 strings out of 493304
  338496 string characters out of 6139871
- 428312 words of memory out of 5000000
+ 429312 words of memory out of 5000000
  21081 multiletter control sequences out of 15000+600000
  83905 words of font info for 191 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
@@ -1112,7 +1104,7 @@ texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
 utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ldpc.pdf (4 pages, 141973 bytes).
+Output written on ldpc.pdf (4 pages, 141931 bytes).
 PDF statistics:
  108 PDF objects out of 1000 (max. 8388607)
  61 compressed objects within 1 object stream

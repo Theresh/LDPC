@@ -439,15 +439,14 @@ Where $p_i$ is the probability. getting message from check to variable node by t
 \begin{align}
 \frac{1-\frac{1-p_0}{p_0}}{1+\frac{1-p_0}{p_0}} & = \frac{1-\frac{1-p_1}{p_1}}{1+\frac{1-p_1}{p_1}} \times \frac{1-\frac{1-p_2}{p_2}}{1+\frac{1-p_2}{p_2}} \times \frac{1-\frac{1-p_4}{p_4}}{1+\frac{1-p_4}{p_4}}\\
 \frac{1-e^{-L_{ext0,0}}}{1+e^{-L_{ext0,0}}} &=\frac{1-e^{-L_{1}}}{1+e^{-L_{1}}}\times \frac{1-e^{-L_{2}}}{1+e^{-L_{2}}} \times \frac{1-e^{-L_{4}}}{1+e^{-L_{4}}}\\ \nonumber
--\tanh \brak{\frac{L_{ext0,0}}{2}}& =\brak{-\tanh \brak{\frac{L_{1}}{2}}}\brak{-\tanh \brak{\frac{L_{2}}{2}}}\brak{ -\tanh \brak{\frac{L_{4}}{2}} }
+-\tanh \brak{\frac{L_{ext0,0}}{2}}& =\brak{-\tanh \brak{\frac{L_{1}}{2}}}\brak{-\tanh \brak{\frac{L_{2}}{2}}}\\
+&\brak{ -\tanh \brak{\frac{L_{4}}{2}} }
 \end{align}
 \begin{align}
 \tanh \brak{\frac{L_{ext0,0}}{2}} &=\sbrak{\prod_{k \in V_j \setminus i}\alpha_{k,0}}\sbrak{\prod_{k \in V_j \setminus i} \tanh \brak{\frac{\beta_{k,0}}{2}}}\\
 L_{ext0,0}  &=\brak{\prod_{k \in V_j \setminus i}\alpha_{k,0}}2 tanh^{-1}\brak{\prod_{k \in V_j \setminus i} \tanh \brak{\frac{\beta_{k,0}}{2}}}\\
 &=\brak{\prod_{k \in V_j \setminus i}\alpha_{k,0}}\\
 &2 tanh^{-1}\log^- \log\brak{\prod_{k \in V_j \setminus i} \tanh \brak{\frac{\beta_{k,0}}{2}}}\\
-&=\brak{\prod_{k \in V_j \setminus i}\alpha_{k,0}}\\
-&2 tanh^{-1}\log^{-1}\brak{\sum_{k \in V_j \setminus i} \log \tanh \brak{\frac{\beta_{k,0}}{2}}}\\
 &=\brak{\prod_{k \in V_j \setminus i}\alpha_{k,0}}\\
 &2 tanh^{-1}\log^{-1}\brak{\sum_{k \in V_j \setminus i} \log \tanh \brak{\frac{\beta_{k,0}}{2}}}\\
 L_{ext0,0}&=\brak{\prod_{k \in V_j \setminus i}\alpha_{k,0}} f\brak{\sum_{k \in V_j \setminus i}f\brak{\beta_{k,0}}} \label{eq:main}
