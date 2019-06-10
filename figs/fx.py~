@@ -14,11 +14,9 @@ for i in range(len(a)):
     y[i]=- np.log(mp.tanh(a[i]))
     
 plt.plot(a,y) 
-plt.plot(a,a)
 plt.grid(True) 
-plt.xlim(0,4)
-plt.ylim(0,4)
 plt.xlabel('$x$')
 plt.ylabel('$f(x)$')  
 plt.legend(['$f(x)=-\log (tanh (\\frac{x}{2}))$'],loc='best')
 plt.savefig('./fxgraph.eps')
+
