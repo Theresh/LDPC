@@ -414,6 +414,10 @@ p_0 &= p_1p_2p_4 + p_1(1-p_2)(1-p_4)\\
 1-p_0 &=p_1p_2(1-p_4) + p_1(1-p_2)p_4\\
 &+(1-p_1)p_2p_4+(1-p_1)(1-p_2)(1-p_4)\\
 \end{align*}
+by rearranging above equations,
+\begin{equation}
+p_0 - (1-p_0) = p_1 -(1-p_1) + p_2 - (1-p_2) + p_4 -(1- p_4)
+\end{equation}
 %\begin{equation}\label{eq:sub}
 %\log \brak{\frac{1-\frac{1-p_0}{p_0}}{1+\frac{1-p_0}{p_0}}}
 %\end{equation}
@@ -421,11 +425,9 @@ Where $p_i$ is the probability. getting message from check to variable node by t
 \begin{align}
 \frac{1-\frac{1-p_0}{p_0}}{1+\frac{1-p_0}{p_0}} & = \frac{1-\frac{1-p_1}{p_1}}{1+\frac{1-p_1}{p_1}} \times \frac{1-\frac{1-p_2}{p_2}}{1+\frac{1-p_2}{p_2}} \times \frac{1-\frac{1-p_4}{p_4}}{1+\frac{1-p_4}{p_4}}\\
 \frac{1-e^{-L_{ext0,0}}}{1+e^{-L_{ext0,0}}} &=\frac{1-e^{-L_{1}}}{1+e^{-L_{1}}}\times \frac{1-e^{-L_{2}}}{1+e^{-L_{2}}} \times \frac{1-e^{-L_{4}}}{1+e^{-L_{4}}}\\ \nonumber
-\tanh \brak{\frac{L{ext0,0}}{2}}& =\tanh \brak{\frac{L_{1}}{2}}\tanh \brak{\frac{L_{2}}{2}}\\ \label{eq :first}
-&\tanh \brak{\frac{L_{4}}{2}} 
+\tanh \brak{\frac{L_{ext0,0}}{2}}& =\tanh \brak{\frac{L_{1}}{2}}\tanh \brak{\frac{L_{2}}{2}} \tanh \brak{\frac{L_{4}}{2}} 
 \end{align}
 
-by substituting \eqref{eq :first} in \eqref{eq:sub} we get,
 \begin{align}
 \log \tanh \brak{\frac{L_{ext0,0}}{2}} & =\log \tanh \brak{\frac{L_{1}}{2}}+\log \tanh \brak{\frac{L_{2}}{2}}\\ \label{eq :first}
 &+\log \tanh \brak{\frac{L_{4}}{2}} 

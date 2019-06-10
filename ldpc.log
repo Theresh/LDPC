@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2018.1.31)  10 JUN 2019 10:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2018.1.31)  10 JUN 2019 11:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -603,17 +603,24 @@ File: ./figs/checkope.eps Graphic file (type eps)
 \gnumericColC=\skip71
 \gnumericColD=\skip72
 )
+Overfull \hbox (9.7864pt too wide) detected at line 420
+\OML/txmi/m/it/12 p[] \OMS/txsy/m/n/12 ^^@ \OT1/txr/m/n/12 (1 \OMS/txsy/m/n/12 
+^^@ \OML/txmi/m/it/12 p[]\OT1/txr/m/n/12 ) = \OML/txmi/m/it/12 p[] \OMS/txsy/m/
+n/12 ^^@ \OT1/txr/m/n/12 (1 \OMS/txsy/m/n/12 ^^@ \OML/txmi/m/it/12 p[]\OT1/txr/
+m/n/12 ) + \OML/txmi/m/it/12 p[] \OMS/txsy/m/n/12 ^^@ \OT1/txr/m/n/12 (1 \OMS/t
+xsy/m/n/12 ^^@ \OML/txmi/m/it/12 p[]\OT1/txr/m/n/12 ) + \OML/txmi/m/it/12 p[] \
+OMS/txsy/m/n/12 ^^@ \OT1/txr/m/n/12 (1 \OMS/txsy/m/n/12 ^^@ \OML/txmi/m/it/12 p
+[]\OT1/txr/m/n/12 )
+ []
 
-LaTeX Warning: Reference `eq:sub' on page 2 undefined on input line 428.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1983) has occurred while \output is active []
 
  [2]
 File: ./figs/varope.eps Graphic file (type eps)
 
 <./figs/varope.eps>
-Overfull \hbox (5.5127pt too wide) in paragraph at lines 484--484
+Overfull \hbox (5.5127pt too wide) in paragraph at lines 486--486
 [] 
  []
 
@@ -632,19 +639,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--27
 
 ] (./ldpc.aux)
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7328 strings out of 493305
- 107541 string characters out of 6139897
+ 7327 strings out of 493305
+ 107533 string characters out of 6139897
  185286 words of memory out of 5000000
- 10655 multiletter control sequences out of 15000+600000
+ 10654 multiletter control sequences out of 15000+600000
  65897 words of font info for 163 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
  36i,15n,38p,323b,499s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on ldpc.dvi (4 pages, 23044 bytes).
+Output written on ldpc.dvi (4 pages, 23164 bytes).
