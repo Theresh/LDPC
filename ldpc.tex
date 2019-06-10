@@ -44,6 +44,7 @@
 \usepackage{enumitem}
 \usepackage{mathtools}
 %\usepackage{iithtlc}
+\usepackage{tikz}
 %\usepackage[framemethod=tikz]{mdframed}
 \usepackage{listings}
     \usepackage[latin1]{inputenc}                                 %%
@@ -390,13 +391,13 @@ Lets assume that we have initilized all LLR values to variable nodes and we sent
 \end{figure}
 since parity node equation for the first check node is $p_0=m_0+m_1+m_2+m_4$. we need to calculate
 \begin{align}
-L_{ext0,0} &= \log \brak{\frac{Pr(x_0 =0 | r_1,r_2,r_4)}{Pr(x_0 =1| r_1,r_2,r_4)}}
+L_{ext0,0} &= \log \brak{\frac{Pr(x_0 =0 | y_1,y_2,y_4)}{Pr(x_0 =1| y_1,y_2,y_4)}}
 \end{align}
 Defining,
 \begin{align}
-L_1 &= \log \brak{\frac{Pr(x_1 =0 | r_1)}{Pr(x_1 =1| r_1)}} = \log \brak{\frac{p_1}{1-p_1}} \\
-L_2 &= \log \brak{\frac{Pr(x_2 =0 | r_2)}{Pr(x_2 =1| r_2)}}=\log \brak{\frac{p_2}{1-p_2}} \\
-L_4 &= \log \brak{\frac{Pr(x_4 =0 | r_4)}{Pr(x_4 =1| r_4)}}= \log \brak{\frac{p_4}{1-p_4}} \\
+L_1 &= \log \brak{\frac{Pr(x_1 =0 | y_1)}{Pr(x_1 =1| y_1)}} = \log \brak{\frac{p_1}{1-p_1}} \\
+L_2 &= \log \brak{\frac{Pr(x_2 =0 | y_2)}{Pr(x_2 =1| y_2)}}=\log \brak{\frac{p_2}{1-p_2}} \\
+L_4 &= \log \brak{\frac{Pr(x_4 =0 | y_4)}{Pr(x_4 =1| y_4)}}= \log \brak{\frac{p_4}{1-p_4}} \\
 \end{align}
 \begin{table}[!ht]
 \begin{center}
