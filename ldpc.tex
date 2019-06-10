@@ -45,6 +45,8 @@
 \usepackage{mathtools}
 %\usepackage{iithtlc}
 \usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+%\usetikzlibrary{arrows.meta,calc,positioning}
 %\usepackage[framemethod=tikz]{mdframed}
 \usepackage{listings}
     \usepackage[latin1]{inputenc}                                 %%
@@ -114,7 +116,13 @@ columns=fullflexible
 
 \begin{document}
 %
-
+\tikzstyle{block} = [rectangle, draw,
+text width=7em, text centered, minimum height=4em]
+\tikzstyle{sum} = [draw, circle, node distance=3cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+\tikzstyle{line} = [draw, -latex']
 \theoremstyle{definition}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{problem}{Problem}
@@ -408,6 +416,10 @@ L_4 &= \log \brak{\frac{Pr(x_4 =0 | y_4)}{Pr(x_4 =1| y_4)}}= \log \brak{\frac{p_
 \caption{Probability of a varibale node from other check nodes}
 \label{table:type}
 \end{table}
+Using Table. \ref{table:type} we can find the 
+\begin{equation}
+p_0=Pr(c_0=0|c_1,c_2,c_4)
+\end{equation}
 \begin{align*}
 p_0 &= p_1p_2p_4 + p_1(1-p_2)(1-p_4)\\
 &+(1-p_1)p_2(1-p_4)
@@ -422,29 +434,39 @@ p_0 - (1-p_0) = p_1 -(1-p_1) + p_2 - (1-p_2) + p_4 -(1- p_4)
 %\begin{equation}\label{eq:sub}
 %\log \brak{\frac{1-\frac{1-p_0}{p_0}}{1+\frac{1-p_0}{p_0}}}
 %\end{equation}
+
 Where $p_i$ is the probability. getting message from check to variable node by taking all variable node informations.
 \begin{align}
 \frac{1-\frac{1-p_0}{p_0}}{1+\frac{1-p_0}{p_0}} & = \frac{1-\frac{1-p_1}{p_1}}{1+\frac{1-p_1}{p_1}} \times \frac{1-\frac{1-p_2}{p_2}}{1+\frac{1-p_2}{p_2}} \times \frac{1-\frac{1-p_4}{p_4}}{1+\frac{1-p_4}{p_4}}\\
 \frac{1-e^{-L_{ext0,0}}}{1+e^{-L_{ext0,0}}} &=\frac{1-e^{-L_{1}}}{1+e^{-L_{1}}}\times \frac{1-e^{-L_{2}}}{1+e^{-L_{2}}} \times \frac{1-e^{-L_{4}}}{1+e^{-L_{4}}}\\ \nonumber
-\tanh \brak{\frac{L_{ext0,0}}{2}}& =\tanh \brak{\frac{L_{1}}{2}}\tanh \brak{\frac{L_{2}}{2}} \tanh \brak{\frac{L_{4}}{2}} 
+-\tanh \brak{\frac{L_{ext0,0}}{2}}& =\brak{-\tanh \brak{\frac{L_{1}}{2}}}\brak{-\tanh \brak{\frac{L_{2}}{2}}}\brak{ -\tanh \brak{\frac{L_{4}}{2}} }
+\end{align}
+\begin{align}
+\tanh \brak{\frac{L_{ext0,0}}{2}} &=\sbrak{\prod_{k \in V_j \setminus i}\alpha_{k,0}}\sbrak{\prod_{k \in V_j \setminus i} \tanh \brak{\frac{\beta_{k,0}}{2}}}\\
+L_{ext0,0}  &=\brak{\prod_{k \in V_j \setminus i}\alpha_{k,0}}2 tanh^{-1}\brak{\prod_{k \in V_j \setminus i} \tanh \brak{\frac{\beta_{k,0}}{2}}}\\
+&=\brak{\prod_{k \in V_j \setminus i}\alpha_{k,0}}\\
+&2 tanh^{-1}\log^- \log\brak{\prod_{k \in V_j \setminus i} \tanh \brak{\frac{\beta_{k,0}}{2}}}\\
+&=\brak{\prod_{k \in V_j \setminus i}\alpha_{k,0}}\\
+&2 tanh^{-1}\log^{-1}\brak{\sum_{k \in V_j \setminus i} \log \tanh \brak{\frac{\beta_{k,0}}{2}}}\\
+&=\brak{\prod_{k \in V_j \setminus i}\alpha_{k,0}}\\
+&2 tanh^{-1}\log^{-1}\brak{\sum_{k \in V_j \setminus i} \log \tanh \brak{\frac{\beta_{k,0}}{2}}}\\
+L_{ext0,0}&=\brak{\prod_{k \in V_j \setminus i}\alpha_{k,0}} f\brak{\sum_{k \in V_j \setminus i}f\brak{\beta_{k,0}}} \label{eq:main}
+\end{align}
+Where,
+\begin{align}
+\alpha_{k,j}&=sign(L_{k,j})\\
+\beta_{k,j}&=\abs{L_{k,j}}\\
+f(x)&= - \log \brak{\tanh{\frac{x}{2}}}
 \end{align}
 
-\begin{align}
-\log \tanh \brak{\frac{L_{ext0,0}}{2}} & =\log \tanh \brak{\frac{L_{1}}{2}}+\log \tanh \brak{\frac{L_{2}}{2}}\\ \label{eq :first}
-&+\log \tanh \brak{\frac{L_{4}}{2}} 
-\end{align}
-\begin{equation}
-sign(L_{ext0,0})= sign(L_{1})sign(L_{2})sign(L_{4})\\
-\end{equation}
-\begin{align}
-\tanh \brak{\frac{\abs{L_{ext0,0}}}{2}} &=\tanh \brak{\frac{\abs{L_{1}}}{2}}\tanh \brak{\frac{\abs{L_{2}}}{2}}\\
-&\tanh \brak{\frac{\abs{L_{4}}}{2}}
-\end{align}
 Using minsum algorithm \cite{minsum}
 \begin{align}
-L(r_{j=0,i=0}) &= sign(L(1))\times sign(L(2))\times sign(L(4))\\ \nonumber
-&\times \min \brak{\abs{L(1)},\abs{L(2)},\abs{L(4)}} \\\nonumber
-&=\sbrak{\prod_{k \in V_j \setminus i} sign(L(q_{kj}))} \min_{k \in V_j \setminus i} \abs{L(q_{kj})}\\ \label{eq : rji}
+f\brak{\sum_{k \in V_j \setminus i}f\brak{\beta_{k,0}}} &\approx f\brak{f\brak{\min_{k \in V_j \setminus i}\brak{\beta_{k,0}}}}\\
+&=\min_{k \in V_j \setminus i}\brak{\beta_{k,0}} \label{eq: minsumapp}
+\end{align}
+Combining \eqref{eq: minsumapp} in \eqref{eq:main},
+\begin{align}
+L(r_{j=0,i=0}) &=\brak{\prod_{k \in V_j \setminus i}\alpha_{k,0}} \brak{\min_{k \in V_j \setminus i}\brak{\beta_{k,0}}}
 \end{align}
 %
 \item Variable Node Operation :\\
