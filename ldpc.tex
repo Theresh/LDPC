@@ -458,15 +458,21 @@ Where,
 \beta_{k,j}&=\abs{L_{k,j}}\\
 f(x)&= - \log \brak{\tanh{\frac{x}{2}}}
 \end{align}
-
-Using minsum algorithm \cite{minsum}
+ \begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=\columnwidth]{./figs/fxgraph}
+\caption{$function f(x)$}
+\label{fig : fx}
+\end{center}
+\end{figure}
+Using the Fig \ref{fig : fx}, we can approximate the above equation as, given by minimum sum approximation \cite{minsum} 
 \begin{align}
 f\brak{\sum_{k \in V_j \setminus i}f\brak{\beta_{k,0}}} &\approx f\brak{f\brak{\min_{k \in V_j \setminus i}\brak{\beta_{k,0}}}}\\
 &=\min_{k \in V_j \setminus i}\brak{\beta_{k,0}} \label{eq: minsumapp}
 \end{align}
 Combining \eqref{eq: minsumapp} in \eqref{eq:main},
 \begin{align}
-L(r_{j=0,i=0}) &=\brak{\prod_{k \in V_j \setminus i}\alpha_{k,0}} \brak{\min_{k \in V_j \setminus i}\brak{\beta_{k,0}}}
+L(r_{j=0,i=0}) &=\brak{\prod_{k \in V_j \setminus i}\alpha_{k,0}} \brak{\min_{k \in V_j \setminus i}\brak{\beta_{k,0}}} \label{eq:rji}
 \end{align}
 %
 \item Variable Node Operation :\\
@@ -514,7 +520,7 @@ Transmitted frames = N, Total number of bits = N $\times$ 7 and Total number of 
 For Each Frame,
 \begin{enumerate}
 \item Initialize $L(q_{ij})$ using \eqref{eq :li} for all $i,j$ for which $h_{ij}=1$ with channel LLR's.
-\item Update $\cbrak{L(r_{ji})}$ using \eqref{eq : rji}.
+\item Update $\cbrak{L(r_{ji})}$ using \eqref{eq:rji}
 \item Update $\cbrak{L(q_{ji})}$ using \eqref{eq: qij}.
 \item Update $\cbrak{L(V_i)}$ using,
 \begin{equation}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2018.1.31)  10 JUN 2019 12:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2018.1.31)  10 JUN 2019 12:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -921,40 +921,38 @@ Overfull \hbox (29.1701pt too wide) in paragraph at lines 443--443
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
+File: ./figs/fxgraph.eps Graphic file (type eps)
+
+<./figs/fxgraph.eps>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: ./figs/varope.eps Graphic file (type eps)
 
 <./figs/varope.eps>
-Overfull \hbox (5.5127pt too wide) in paragraph at lines 509--509
+Overfull \hbox (5.5127pt too wide) in paragraph at lines 515--515
 [] 
  []
 
-[3]
 
-LaTeX Warning: Reference `eq : rji' on page 4 undefined on input line 517.
+Underfull \vbox (badness 4846) has occurred while \output is active []
 
+ [3]
 File: ./figs/ber.eps Graphic file (type eps)
+
 <./figs/ber.eps> (./ldpc.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 25--27
 []\OT1/txr/m/n/9 R.Gallager, ``Low-density par-ity check codes,'' \OT1/txr/m/it
 /9 IRE
  []
 
-) [4
-
-] (./ldpc.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+) [4] (./ldpc.aux) ) 
 Here is how much of TeX's memory you used:
- 17072 strings out of 493305
- 322779 string characters out of 6139897
+ 17075 strings out of 493305
+ 322816 string characters out of 6139897
  414681 words of memory out of 5000000
- 20165 multiletter control sequences out of 15000+600000
+ 20167 multiletter control sequences out of 15000+600000
  65897 words of font info for 163 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
  56i,15n,56p,424b,499s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on ldpc.dvi (4 pages, 31744 bytes).
+Output written on ldpc.dvi (4 pages, 32104 bytes).
