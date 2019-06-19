@@ -241,7 +241,7 @@ of Electrical Engineering, Indian Institute of Technology, Hyderabad
 %
 \begin{abstract}
 \boldmath
-A brief description about the design and implementataion of LDPC codes using (7,4) Hamming parity check matrix.
+A brief description about the design and implementataion of LDPC codes using (7,4) Hamming parity check matrix. Calculation of LLR's for higher order mapping schemes are decribed by taking examples of QPSK and 8-SPK.
 \end{abstract}
 
 
@@ -537,7 +537,7 @@ Decoding can be done using,
 \end{cases}
 \end{equation}
 %
-\section{Simulation Results}
+\subsection{Simulation Results}
 For frames N=10000.
  \begin{figure}[!ht]
 \begin{center}
@@ -549,19 +549,20 @@ For frames N=10000.
 Fig \ref{fig : ber} Shows the Comparison of Probability error with channel coding and without channel coding. Since the parity check matrix taken was not much sparse, we are not getting near shannon limit performance. (Good sparse matrix i.e number of entries in H $<< m\times n $ )
 
 \section{LDPC Decoding for Higher Order Mapping Schemes}
-A generalized and approximated Log Likelihood Ratio given by \cite{llr}
+In the case of higher order mapping schemes, calculation of Log Likelihood Ratio's are crutial. A generalized and approximated Log Likelihood Ratio given by \cite{llr}
 \subsection{General Expression for Calculation of Log Likelihood Ratio(LLR)}
 \begin{align}
 LLR(b_j)&= \log \brak{\frac{Pr(b_j=0|y)}{Pr(b_j=1|y)}}\\
 LLR(b_j)&=\log \brak{\frac{\sum_{i\in \cbrak{K_{b_j=0}}}\frac{1}{2\sigma^2}e^{\frac{-\abs{y-x_i}^2}{2\sigma^2}}}{\sum_{i\in \cbrak{K_{b_j=1}}}\frac{1}{2\sigma^2}e^{\frac{-\abs{y-x_i}^2}{2\sigma^2}}}}
 \end{align}
+Where the alphabet $\cbrak{K_{b_j=b}}$ is the set of all symbols representing the $j^{th}$ bit equals to $b=0$ or $b=1$.
 Using the maximum logarithmic Approach,
 \begin{equation}
 \log \brak{e^a+e^b}\approx \max \brak{a,b}
 \end{equation}
 The LLR expression can be written as,
 \begin{align}
-LLR(b_j)&= \max_{i\in \cbrak{K_{b_j=0}}}\brak{e^{\frac{-\abs{y-x_i}^2}{2\sigma^2}}} -\max_{i\in \cbrak{K_{b_j=1}}}\brak{e^{\frac{-\abs{y-x_i}^2}{2\sigma^2}}}
+LLR(b_j)&\approx \max_{i\in \cbrak{K_{b_j=0}}}\brak{e^{\frac{-\abs{y-x_i}^2}{2\sigma^2}}} -\max_{i\in \cbrak{K_{b_j=1}}}\brak{e^{\frac{-\abs{y-x_i}^2}{2\sigma^2}}}
 \end{align}
 \subsection{Approximated LLR's for QPSK Mapping Scheme}
 For the QPSK mapping scheme , $b_1,b_0$ are the MSB and LSB of the mapped symbols.
