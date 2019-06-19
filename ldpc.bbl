@@ -29,4 +29,10 @@ R.Gallager, ``{Low-density parity check codes},'' \emph{IRE Trans.Information
 N.~Wiberg, ``{Codes and Decoding on General Graphs},'' \emph{Phd
   Dissertation,Linkoping University,Sweden}, 1996.
 
+\bibitem{llr}
+V.~B. {Olivatto}, R.~R. {Lopes}, and E.~R. {de Lima}, ``{Simplified LLR
+  calculation for DVB-S2 LDPC decoder},'' in \emph{2015 IEEE International
+  Conference on Communication, Networks and Satellite (COMNESTAT)}, Dec 2015,
+  pp. 26--31.
+
 \end{thebibliography}
